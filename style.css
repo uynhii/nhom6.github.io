@@ -1,11 +1,59 @@
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    text-align: center;
+/* CSS for title hover effect */
+.title {
+    font-size: 20px;
+    color: #0066cc;
+    transition: all 0.5s ease;
+}
+
+.title:hover {
+    color: red;
+    font-size: 50px;
+    transform: matrix(1.4, -0.54, 0.54, 1.4, 0, 0);
+}
+
+/* Multicolor text-shadow animation */
+@keyframes text-shadow-multicolor {
+    0% { text-shadow: 2px 2px #ff0000; }
+    25% { text-shadow: 2px 2px #ff7f00; }
+    50% { text-shadow: 2px 2px #ffff00; }
+    75% { text-shadow: 2px 2px #00ff00; }
+    100% { text-shadow: 2px 2px #0000ff; }
+}
+
+.about h2 {
+    animation: text-shadow-multicolor 5s infinite;
+}
+
+/* Slide-in animation */
+@keyframes slide-in-elliptic-right-bck {
+    0% {
+        transform: translateX(600px) scale(0.6);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0) scale(1);
+        opacity: 1;
+    }
+}
+
+.about p {
+    animation: slide-in-elliptic-right-bck 5s infinite;
     color: #333;
 }
 
-h1 {
-    color: #0066cc;
-    font-size: 36px;
+/* Icon styling */
+.icons {
+    display: flex;
+    gap: 15px;
+    font-size: 24px;
+    margin-top: 10px;
+}
+
+.icons i {
+    color: #444;
+    transition: color 0.3s ease;
+}
+
+.icons i:hover {
+    color: #ff6347;
 }
