@@ -5,6 +5,7 @@
     box-sizing: border-box;
 }
 
+
 /* Màu nền toàn bộ trang */
 body {
     font-family: Arial, sans-serif;
@@ -12,7 +13,6 @@ body {
     color: #333;
     line-height: 1.6;
 }
-
 @keyframes blink {
     0%, 100% {
         opacity: 1; /* Hoàn toàn hiển thị */
@@ -21,6 +21,7 @@ body {
         opacity: 0; /* Ẩn đi một nửa */
     }
 }
+
 
 .member-title {
     font-size: 5em; /* Kích thước chữ */
@@ -31,6 +32,7 @@ body {
     letter-spacing: 0em; /* Khoảng cách giữa các chữ cái */
     margin: 20px 0; /* Khoảng cách trên và dưới */
 }
+
 
 /* Định nghĩa hiệu ứng zoom-in */
 @keyframes zoom-in {
@@ -44,6 +46,7 @@ body {
     }
 }
 
+
 /* Dòng chữ chạy */
 .marquee {
     background-color: #fcffff; /* Màu nền cho dòng chữ chạy */
@@ -54,30 +57,39 @@ body {
     padding: 5px 0; /* Khoảng cách trên và dưới */
 }
 
+
 /* Định dạng các box thông tin thành viên */
 .team-section {
     display: flex;
-    flex-wrap: wrap; /* Cho phép các thành viên xuống dòng */
-    justify-content: space-between; /* Căn giữa các hàng */
+    justify-content: center;
+    gap: 2rem;
     padding: 2rem;
+    flex-wrap: wrap;
 }
+
 
 .team-member {
     background: #fff;
     border-radius: 50px;
+    -moz-border-radius: 50px;
+    -webkit-border-radius: 50px;
     padding: 1.5rem;
-    width: calc(33.33% - 1rem); /* Ba thành viên trên một hàng, trừ khoảng cách */
+    width: 250px;
     text-align: center;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s ease; /* Kết hợp các hiệu ứng chuyển tiếp */
-    margin-bottom: 20px; /* Khoảng cách giữa các hàng */
+    transition: transform 0.3s, box-shadow 0.3s;
+    transition: background-color 0.3s ease; /* Hiệu ứng chuyển màu mượt mà */
+    transition: transform 0.3s ease; /* Hiệu ứng chuyển động mượt mà */
 }
 
+
 .team-member:hover {
-    transform: translateY(-10px) rotate(5deg); /* Xoay nhẹ 5 độ khi hover */
+    transform: translateY(-10px);
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
     background-color: #68e6f7; /* Màu nền xanh nhạt khi hover */
+    transform: rotate(5deg); /* Xoay nhẹ 5 độ khi hover */
 }
+
 
 .member-img {
     width: 120px;
@@ -87,17 +99,20 @@ body {
     overflow: hidden;
 }
 
+
 .member-img img {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
 
+
 .team-member h2 {
     font-size: 1.5rem;
     color: #2eb9ce;
     margin-bottom: 0.5rem;
 }
+
 
 .role {
     font-size: 1rem;
@@ -106,6 +121,7 @@ body {
     font-weight: bold;
 }
 
+
 .description {
     font-size: 0.9rem;
     color: #666;
@@ -113,14 +129,20 @@ body {
     line-height: 1.4;
 }
 
+
 .team-member p {
     font-size: 0.9em; /* Kích thước chữ nhỏ hơn */
     display: inline-block; /* Giữ icon và văn bản trên cùng một dòng */
     margin: 5px 0; /* Khoảng cách giữa các dòng thông tin */
 }
 
+
 .team-member p i {
     margin-right: 5px; /* Khoảng cách giữa icon và văn bản */
     color: #2eb9ce; /* Màu cho icon */
     font-size: 0.8em; /* Kích thước icon nhỏ hơn */
 }
+
+
+
+
