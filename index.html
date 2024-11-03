@@ -3,30 +3,94 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nhóm của chúng tôi</title>
-    <!-- Link to Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <!-- Link to custom CSS -->
+    <title>Our Team Members</title>
+    <!-- Sử dụng phông chữ từ Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
+    <!-- Tiêu đề Meet Our Team Member với hiệu ứng theo yêu cầu -->
     <header>
-        <h1 class="title">Nhóm CNTTKD</h1>
-        <p>Chào mừng bạn đến với trang thông tin của nhóm!</p>
+        <h1 class="member-title">MEET OUR TEAM MEMBER</h1>
     </header>
-
-    <section class="about">
-        <h2>Về chúng tôi</h2>
-        <p>Chúng tôi là nhóm sinh viên chuyên về Công Nghệ Thông Tin và Kinh Doanh.</p>
-        <div class="icons">
-            <i class="fas fa-laptop-code"></i>
-            <i class="fas fa-users"></i>
-            <i class="fas fa-graduation-cap"></i>
+   
+    <!-- Dòng chữ chạy -->
+    <div class="marquee">
+        <marquee behavior="scroll" direction="left">Welcome to our team page! We are excited to introduce our members!</marquee>
+    </div>
+   
+    <!-- Thông tin các thành viên -->
+    <main class="team-section">
+        <div class="team-member">
+            <div class="member-img">
+                <img src="https://i.pinimg.com/originals/2d/a7/1e/2da71e356e8fea0c3d69d0010d17eaec.jpg" alt="Avatar of Hương Giang">
+            </div>
+            <h2>Hương Giang</h2>
+            <p class="role">Member</p>
+            <p class="description">Giang is good at dancing.</p>
+            <p><i class="fas fa-envelope"></i> Email: giang@gmail.com</p>
+            <p><i class="fas fa-phone"></i> Phone: (123) 456-7890</p>
         </div>
-    </section>
+       
+        <div class="team-member">
+            <div class="member-img">
+                <img src="https://i.pinimg.com/originals/de/7c/0c/de7c0cb504cafc6e144c487ccba6e435.jpg" alt="Avatar of Uyển Nhi">
+            </div>
+            <h2>Uyển Nhi</h2>
+            <p class="role">Member</p>
+            <p class="description">Nhi enjoys taking photos.</p>
+            <p><i class="fas fa-envelope"></i> Email: nhi@gmail.com</p>
+            <p><i class="fas fa-phone"></i> Phone: (234) 567-8901</p>
+        </div>
+       
+        <div class="team-member">
+            <div class="member-img">
+                <img src="https://i.pinimg.com/originals/a5/37/fb/a537fbc36fb3b862dc4e69dc16991a96.jpg" alt="Avatar of Minh Anh">
+            </div>
+            <h2>Minh Anh</h2>
+            <p class="role">Member</p>
+            <p class="description">Minh Anh has a knack for listening to music.</p>
+            <p><i class="fas fa-envelope"></i> Email: anh@gmail.com</p>
+            <p><i class="fas fa-phone"></i> Phone: (456) 789-0123</p>
+        </div>
+       
 
-    <footer>
-        <p>Liên hệ: <a href="mailto:contact@ourgroup.com">contact@ourgroup.com</a></p>
-    </footer>
+        <div class="team-member">
+            <div class="member-img">
+                <img src="https://i.pinimg.com/originals/38/cd/b9/38cdb91ef60001d7e8713175a4a557e1.jpg" alt="Avatar of Nam Phương">
+            </div>
+            <h2>Nam Phương</h2>
+            <p class="role">Leader</p>
+            <p class="description">Phuong loves listening to music.</p>
+            <p><i class="fas fa-envelope"></i> Email: phuong@gmail.com</p>
+            <p><i class="fas fa-phone"></i> Phone: (567) 890-1234</p>
+        </div>
+
+        <div class="team-member">
+            <div class="member-img">
+                <img src="https://i.pinimg.com/originals/e7/29/e6/e729e69636a8a13a12a2267dd5002a17.jpg" alt="Avatar of Gia Hân">
+            </div>
+            <h2>Gia Hân</h2>
+            <p class="role">Member</p>
+            <p class="description">Han is keen on playing game.</p>
+            <p><i class="fas fa-envelope"></i> Email: han@gmail.com</p>
+            <p><i class="fas fa-phone"></i> Phone: (678) 901-2345</p>
+        </div>
+
+
+        <div class="team-member">
+            <div class="member-img">
+                <img src="https://i.pinimg.com/originals/87/7f/9f/877f9f0fb3d4bf1cf622e7b113fc7e58.jpg" alt="Avatar of Mỹ Hương">
+            </div>
+            <h2>Mỹ Hương</h2>
+            <p class="role">Member</p>
+            <p class="description">Huong enjoys watching film.</p>
+            <p><i class="fas fa-envelope"></i> Email: huong@gmail.com</p>
+            <p><i class="fas fa-phone"></i> Phone: (789) 012-3456</p>
+        </div>
+    </main>
+   
+    <script src="script.js"></script>
 </body>
 </html>

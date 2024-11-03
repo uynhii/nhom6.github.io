@@ -1,59 +1,126 @@
-/* CSS for title hover effect */
-.title {
-    font-size: 20px;
-    color: #0066cc;
-    transition: all 0.5s ease;
+/* Reset cơ bản */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-.title:hover {
-    color: red;
-    font-size: 50px;
-    transform: matrix(1.4, -0.54, 0.54, 1.4, 0, 0);
+/* Màu nền toàn bộ trang */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #d0f0f8; /* Màu xanh nhạt */
+    color: #333;
+    line-height: 1.6;
 }
 
-/* Multicolor text-shadow animation */
-@keyframes text-shadow-multicolor {
-    0% { text-shadow: 2px 2px #ff0000; }
-    25% { text-shadow: 2px 2px #ff7f00; }
-    50% { text-shadow: 2px 2px #ffff00; }
-    75% { text-shadow: 2px 2px #00ff00; }
-    100% { text-shadow: 2px 2px #0000ff; }
+@keyframes blink {
+    0%, 100% {
+        opacity: 1; /* Hoàn toàn hiển thị */
+    }
+    50% {
+        opacity: 0; /* Ẩn đi một nửa */
+    }
 }
 
-.about h2 {
-    animation: text-shadow-multicolor 5s infinite;
+.member-title {
+    font-size: 5em; /* Kích thước chữ */
+    animation: blink 3s infinite; /* Thêm hiệu ứng chớp chớp */
+    text-align: center; /* Căn giữa văn bản */
+    color: #02336edd; /* Màu chữ */
+    text-shadow: 0px 5px 10px #8fb7eb; /* Đổ bóng cho chữ */
+    letter-spacing: 0em; /* Khoảng cách giữa các chữ cái */
+    margin: 20px 0; /* Khoảng cách trên và dưới */
 }
 
-/* Slide-in animation */
-@keyframes slide-in-elliptic-right-bck {
+/* Định nghĩa hiệu ứng zoom-in */
+@keyframes zoom-in {
     0% {
-        transform: translateX(600px) scale(0.6);
-        opacity: 0;
+        opacity: 0; /* Bắt đầu với độ trong suốt là 0 */
+        transform: scale(0.5); /* Bắt đầu với kích thước nhỏ */
     }
     100% {
-        transform: translateX(0) scale(1);
-        opacity: 1;
+        opacity: 1; /* Kết thúc với độ trong suốt là 1 */
+        transform: scale(1); /* Kết thúc với kích thước bình thường */
     }
 }
 
-.about p {
-    animation: slide-in-elliptic-right-bck 5s infinite;
-    color: #333;
+/* Dòng chữ chạy */
+.marquee {
+    background-color: #fcffff; /* Màu nền cho dòng chữ chạy */
+    color: rgba(1, 104, 141, 0.788); /* Màu chữ */
+    font-size: 1rem; /* Kích thước chữ */
+    font-style: italic;
+    text-align: center; /* Căn giữa */
+    padding: 5px 0; /* Khoảng cách trên và dưới */
 }
 
-/* Icon styling */
-.icons {
+/* Định dạng các box thông tin thành viên */
+.team-section {
     display: flex;
-    gap: 15px;
-    font-size: 24px;
-    margin-top: 10px;
+    flex-wrap: wrap; /* Cho phép các thành viên xuống dòng */
+    justify-content: space-between; /* Căn giữa các hàng */
+    padding: 2rem;
 }
 
-.icons i {
-    color: #444;
-    transition: color 0.3s ease;
+.team-member {
+    background: #fff;
+    border-radius: 50px;
+    padding: 1.5rem;
+    width: calc(33.33% - 1rem); /* Ba thành viên trên một hàng, trừ khoảng cách */
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s ease; /* Kết hợp các hiệu ứng chuyển tiếp */
+    margin-bottom: 20px; /* Khoảng cách giữa các hàng */
 }
 
-.icons i:hover {
-    color: #ff6347;
+.team-member:hover {
+    transform: translateY(-10px) rotate(5deg); /* Xoay nhẹ 5 độ khi hover */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    background-color: #68e6f7; /* Màu nền xanh nhạt khi hover */
+}
+
+.member-img {
+    width: 120px;
+    height: 120px;
+    margin: 0 auto 1rem;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.member-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.team-member h2 {
+    font-size: 1.5rem;
+    color: #2eb9ce;
+    margin-bottom: 0.5rem;
+}
+
+.role {
+    font-size: 1rem;
+    color: #84aadb;
+    margin-bottom: 1rem;
+    font-weight: bold;
+}
+
+.description {
+    font-size: 0.9rem;
+    color: #666;
+    padding: 0 1rem;
+    line-height: 1.4;
+}
+
+.team-member p {
+    font-size: 0.9em; /* Kích thước chữ nhỏ hơn */
+    display: inline-block; /* Giữ icon và văn bản trên cùng một dòng */
+    margin: 5px 0; /* Khoảng cách giữa các dòng thông tin */
+}
+
+.team-member p i {
+    margin-right: 5px; /* Khoảng cách giữa icon và văn bản */
+    color: #2eb9ce; /* Màu cho icon */
+    font-size: 0.8em; /* Kích thước icon nhỏ hơn */
 }
