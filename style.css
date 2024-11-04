@@ -1,3 +1,4 @@
+
 /* Reset cơ bản */
 * {
     margin: 0;
@@ -112,8 +113,10 @@ body {
     color: #2eb9ce;
     margin-bottom: 0.5rem;
 }
-
-
+/* Tăng kích cỡ chữ khi hover */
+.team-member:hover h2 {
+    transform: scale(1.3); 
+}
 .role {
     font-size: 1rem;
     color: #84aadb;
@@ -142,7 +145,4 @@ body {
     color: #2eb9ce; /* Màu cho icon */
     font-size: 0.8em; /* Kích thước icon nhỏ hơn */
 }
-
-
-
 
